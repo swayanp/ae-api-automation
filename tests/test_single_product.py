@@ -1,7 +1,7 @@
 import pytest
 import allure
 from src.assertions import assert_status
-from utils.attachments import attach_response
+from src.utils.attachments import attach_response
 
 
 @allure.epic("Products")
@@ -11,7 +11,7 @@ class TestGetSingleProduct:
     
     @allure.title("Validate product with ID=1 exists in /productsList")
     @allure.description("This test fetches all products and checks if product_id=1 is present with correct attributes.")
-    def test_get_single_product_details(self, client, attach_response):
+    def test_get_single_product_details(self, client):
         endpoint = "productsList"
 
         with allure.step(f"Send GET request to /{endpoint}"):
