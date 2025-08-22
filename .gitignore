@@ -1,0 +1,20 @@
+# .gitignore file for Python projects.
+# - Ignores Python bytecode and cache files.
+# - Excludes virtual environment directories.
+# - Omits test output logs and reports.
+# - Prevents system-specific files from being tracked.
+
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.log
+
+# Virtual environment
+.venv/
+
+# Test outputs
+logs/
+reports/
+
+# System files
+.DS_Store

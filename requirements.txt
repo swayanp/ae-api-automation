@@ -1,0 +1,15 @@
+# This requirements.txt file lists the Python dependencies for the ae-api-automation project.
+# - pytest: Testing framework for writing and running tests.
+# - requests: Library for making HTTP requests.
+# - allure-pytest: Integration for generating Allure test reports with pytest.
+# - python-dotenv: Loads environment variables from .env files.
+# - PyYAML: YAML parsing and emitting library.
+# - tenacity: Retry utility for handling unreliable operations.
+# - jsonschema: Library for validating JSON schemas.
+pytest==8.3.2
+requests==2.32.3
+allure-pytest==2.13.5
+python-dotenv==1.0.1
+PyYAML==6.0.2
+tenacity==9.0.0
+jsonschema==4.23.0

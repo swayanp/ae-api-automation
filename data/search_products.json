@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Valid Search - top",
+    "payload": { "search_product": "top" },
+    "expected_status": 200
+  },
+  {
+    "name": "Invalid Search - gibberish",
+    "payload": { "search_product": "zzzxxyyy" },
+    "expected_status": 200
+  }
+]

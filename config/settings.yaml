@@ -1,0 +1,24 @@
+# Configuration settings for API automation framework.
+# 
+# Sections:
+# - default: Contains global settings such as timeout (in seconds), number of retries, and retry backoff interval.
+# - envs: Defines environment-specific configurations.
+#   - dev: Development environment with its base API URL.
+#   - qa: Quality Assurance environment with its base API URL.
+#   - prod: Production environment with its base API URL.
+#
+# Usage:
+# Select the appropriate environment under 'envs' for API requests.
+# Adjust 'default' values to control request behavior globally.
+default:
+  timeout: 15
+  retries: 2
+  retry_backoff: 0.2
+
+envs:
+  dev:
+    base_url: https://dev.automationexercise.com/api
+  qa:
+    base_url: https://qa.automationexercise.com/api
+  prod:
+    base_url: https://automationexercise.com/api
