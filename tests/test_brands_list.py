@@ -1,12 +1,13 @@
 import pytest
 import allure
 from src.assertions import assert_status, assert_in_body
+from src.utils.attachments import attach_response
 
 @allure.epic("Brands")
 @allure.feature("GET /brandsList")
 @pytest.mark.functional
 @pytest.mark.smoke
-def test_get_brands_list(client, attach_response):
+def test_get_brands_list(client):
     with allure.step("Send GET request to /brandsList"):
         resp = client.get("brandsList")
         attach_response(resp, "brandsList")
