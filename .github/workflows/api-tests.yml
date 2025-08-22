@@ -53,15 +53,15 @@ jobs:
         pip install allure-pytest
         allure generate allure-results --clean -o allure-report
 
-    - name: 📢 Send email on failure (optional)
-      if: failure()
-      uses: dawidd6/action-send-mail@v3
-      with:
-        server_address: smtp.gmail.com
-        server_port: 587
-        username: ${{ secrets.EMAIL_USERNAME }}
-        password: ${{ secrets.EMAIL_PASSWORD }}
-        subject: "❌ API Tests Failed on ${{ github.repository }}"
-        body: "Check failed job here: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
-        to: swayanprakash1@outlook.com
-        from: GitHub Actions <noreply@github.com>
+    # - name: 📢 Send email on failure (optional)
+    #   if: failure()
+    #   uses: dawidd6/action-send-mail@v3
+    #   with:
+    #     server_address: smtp.gmail.com
+    #     server_port: 587
+    #     username: ${{ secrets.EMAIL_USERNAME }}
+    #     password: ${{ secrets.EMAIL_PASSWORD }}
+    #     subject: "❌ API Tests Failed on ${{ github.repository }}"
+    #     body: "Check failed job here: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+    #     to: swayanprakash1@outlook.com
+    #     from: GitHub Actions <noreply@github.com>
