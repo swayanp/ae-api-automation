@@ -45,22 +45,23 @@ jobs:
         name: allure-results
         path: allure-results
 
-    - name: ⚙️ Install Allure CLI
-      run: |
-        sudo apt-add-repository -y ppa:qameta/allure
-        sudo apt-get update
-        sudo apt-get install -y allure
+    # - name: ⚙️ Install Allure CLI
+    #   run: |
+    #     sudo apt-add-repository -y ppa:qameta/allure
+    #     sudo apt-get update
+    #     sudo apt-get install -y allure
 
-    - name: 🔧 Generate Allure Report
-      run: |
-        allure generate allure-results --clean -o allure-report
+    # - name: 🔧 Generate Allure Report
+    #   run: |
+        
+    #     allure generate allure-results --clean -o allure-report
 
-    - name: 👀 Deploy Allure Report to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v4
-      if: success()
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./allure-report
+    # - name: 👀 Deploy Allure Report to GitHub Pages
+    #   uses: peaceiris/actions-gh-pages@v4
+    #   if: success()
+    #   with:
+    #     github_token: ${{ secrets.GITHUB_TOKEN }}
+    #     publish_dir: ./allure-report
 
 
     # - name: 📢 Send email on failure (optional)
